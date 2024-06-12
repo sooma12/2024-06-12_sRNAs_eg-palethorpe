@@ -1,4 +1,6 @@
 /data
 /logs
 /ref
-sample_sheet.txt 
+sample_sheet*.txt
+DES*.csv
+*.bt2
