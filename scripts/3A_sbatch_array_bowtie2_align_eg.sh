@@ -18,7 +18,7 @@ module load bowtie/2.5.2
 # Load config file
 source ./config.cfg
 
-echo "Bowtie2 reference genome index basename: $BT2_OUT_BASE"
+echo "Bowtie2 reference genome index basename: $BT2_OUT_BASE_eg"
 echo "sample sheet located at $SAMPLE_SHEET_PATH_eg"
 echo "alignment output directory containing .bam files: $MAPPED_DIR_eg_VerySens"
 
@@ -35,4 +35,4 @@ fq=$(sed -n "$SLURM_ARRAY_TASK_ID"p $SAMPLE_SHEET_PATH_eg |  awk '{print $2}')
 echo "Running Bowtie2 on $fq"
 
 # Bowtie2 in paired end mode
-bowtie2 --local --very-sensitive-local  -p 8 -x $BT2_OUT_BASE --no-unal -q -U $fq -S $MAPPED_DIR_eg_VerySens/$name.sam
+bowtie2 --local --very-sensitive-local  -p 8 -x $BT2_OUT_BASE_eg --no-unal -q -U $fq -S $MAPPED_DIR_eg_VerySens/$name.sam

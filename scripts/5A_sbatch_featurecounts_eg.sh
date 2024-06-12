@@ -14,7 +14,7 @@ module load subread/2.0.6
 
 source ./config.cfg
 echo "featureCounts file name: $COUNTS_FILE_eg found in $COUNTS_OUTDIR"
-echo "genome GTF reference file: $GENOME_GTF"
+echo "genome GTF reference file: $GTF_REF_eg"
 echo ".bam input files were found in: $MAPPED_DIR_eg_VerySens"
 
 mkdir -p $COUNTS_OUTDIR
@@ -22,7 +22,7 @@ mkdir -p $COUNTS_OUTDIR
 # Run featureCounts on all BAM files from STAR
 # -t flag specifies features in column 3 of GTF to count; default is exon.
 featureCounts \
--a $GENOME_GTF \
+-a $GTF_REF_eg \
 -o $COUNTS_OUTDIR/$COUNTS_FILE_eg \
 -t sRNA \
 $MAPPED_DIR_eg_VerySens/*.bam
