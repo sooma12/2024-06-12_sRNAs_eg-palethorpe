@@ -2,8 +2,8 @@
 #SBATCH --partition=short
 #SBATCH --job-name=samtools_to_sorted_bam_pal
 #SBATCH --time=04:00:00
-#SBATCH --array=1-12%13
-#SBATCH --ntasks=12
+#SBATCH --array=1-6
+#SBATCH --ntasks=6
 #SBATCH --mem=100G
 #SBATCH --cpus-per-task=1
 #SBATCH --output=/work/geisingerlab/Mark/rnaSeq/2024-06-12_sRNAs_eg-palethorpe/logs/%x-%j-%a.log
