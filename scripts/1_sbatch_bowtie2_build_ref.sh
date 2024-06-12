@@ -5,8 +5,8 @@
 #SBATCH -N 1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
-#SBATCH --output=/work/geisingerlab/Mark/rnaSeq/2024-06-11_sRNAs_from_eg_2020_bfmRS/logs/%x-%j.log
-#SBATCH --error=/work/geisingerlab/Mark/rnaSeq/2024-06-11_sRNAs_from_eg_2020_bfmRS/logs/%x-%j.err
+#SBATCH --output=/work/geisingerlab/Mark/rnaSeq/2024-06-12_sRNAs_eg-palethorpe/logs/%x-%j.log
+#SBATCH --error=/work/geisingerlab/Mark/rnaSeq/2024-06-12_sRNAs_eg-palethorpe/logs/%x-%j.err
 #SBATCH --mail-type=END
 #SBATCH --mail-user=soo.m@northeastern.edu
 
