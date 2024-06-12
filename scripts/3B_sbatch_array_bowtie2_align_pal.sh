@@ -19,9 +19,9 @@ source ./config.cfg
 
 echo "Bowtie2 reference genome index basename: $BT2_OUT_BASE"
 echo "sample sheet located at $SAMPLE_SHEET_PATH_pal"
-echo "alignment output directory containing .bam files: ${MAPPED_DIR_pal}"
+echo "alignment output directory containing .bam files: ${MAPPED_DIR_pal_VerySens}"
 
-mkdir -p $MAPPED_DIR_pal
+mkdir -p $MAPPED_DIR_pal_VerySens
 
 # Array job!  Used my sample sheet technique from 2023-11-13 breseq for this.
 # NOTE!!! sample sheet prep is moved to separate script.
@@ -35,4 +35,4 @@ r2=$(sed -n "$SLURM_ARRAY_TASK_ID"p $SAMPLE_SHEET_PATH_pal |  awk '{print $3}')
 echo "Running Bowtie2 on files $r1 and $r2"
 
 # Bowtie2 in paired end mode
-bowtie2 --local --very-sensitive-local -p 8 -x $BT2_OUT_BASE -q -1 $r1 -2 $r2 -S $MAPPED_DIR_pal/$name.sam
+bowtie2 --local --very-sensitive-local -p 8 -x $BT2_OUT_BASE -q -1 $r1 -2 $r2 -S $MAPPED_DIR_pal_VerySens/$name.sam
