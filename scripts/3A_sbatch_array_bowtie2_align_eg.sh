@@ -35,4 +35,4 @@ fq=$(sed -n "$SLURM_ARRAY_TASK_ID"p $SAMPLE_SHEET_PATH_eg |  awk '{print $2}')
 echo "Running Bowtie2 on $fq"
 
 # Bowtie2 in paired end mode
-bowtie2 --local --very-sensitive-local  -p 8 -x $BT2_OUT_BASE_eg --no-unal -q -U $fq -S $MAPPED_DIR_eg_VerySens/$name.sam
+bowtie2 --local --very-sensitive-local -p 8 -x $BT2_OUT_BASE_eg --no-unal -q -U $fq -S $MAPPED_DIR_eg_VerySens/$name.sam

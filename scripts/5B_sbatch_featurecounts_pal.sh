@@ -24,5 +24,7 @@ mkdir -p $COUNTS_OUTDIR
 featureCounts \
 -a $GENOME_GTF \
 -o $COUNTS_OUTDIR/$COUNTS_FILE_pal \
+-p \
+--countReadPairs \
 -t sRNA \
 $MAPPED_DIR_pal_VerySens/*.bam
