@@ -6,8 +6,9 @@
 #SBATCH --ntasks=6
 #SBATCH --mem=100G
 #SBATCH --cpus-per-task=8
-#SBATCH --output=/work/geisingerlab/Mark/rnaSeq/2024-06-12_sRNAs_eg-palethorpe/logs/%x-%j-%a.log
-#SBATCH --error=/work/geisingerlab/Mark/rnaSeq/2024-06-12_sRNAs_eg-palethorpe/logs/%x-%j-%a.err#SBATCH --mail-type=END,FAIL
+#SBATCH --output=/work/geisingerlab/Mark/rnaSeq/2024-06-12_sRNAs_eg-palethorpe/logs/%x-%A-%a.log
+#SBATCH --error=/work/geisingerlab/Mark/rnaSeq/2024-06-12_sRNAs_eg-palethorpe/logs/%x-%A-%a.err
+#SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=soo.m@northeastern.edu
 
 ## Usage: sbatch 3A_sbatch_array_bowtie2_align_eg.sh
